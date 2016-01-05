@@ -259,6 +259,7 @@ def __has_data(fd):
 if __name__ == "__main__":
     pubkey = sys.stdin.read()
     try:
+        # Key used for testing. Not for production use.
         print signkey(pubkey, sys.argv[1], "F792 2C6C A38E 1972 C18E  09CF 479E E7E0 FDF8 8313")
     except SignKeyException, e:
         print e.message
